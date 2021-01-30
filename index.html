@@ -30,10 +30,200 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <div class="card" value="9" id="nine">
+        <div class="card-header">
+          9:00AM
+        </div>
+        <div class="card-body">
+          <h5 id=card9 class="card-title"></h5>
+          <form id="event-form">
+            <label for="event-input9">Add Your Event</label>
+            <input type="text" id="event-input9" /><br />
+          </form>
+          <a href="#" id=btn9 class="btn btn-primary">Save event</a>
+        </div>
+      </div>
+
+      <div class="card" value="10" id="ten">
+        <div class="card-header">
+          10:00AM
+        </div>
+        <div class="card-body">
+          <h5 class="card-title" id=card10 ></h5>
+          <form id="event-form">
+            <label for="event-input10">Add Your Event</label>
+            <input type="text" id="event-input10" /><br />
+          </form>
+          <a href="#" id=btn10 class="btn btn-primary">Save event</a>
+        </div>
+      </div>
+
+      <div class="card" value="11" id="eleven">
+        <div class="card-header">
+          11:00AM
+        </div>
+        <div class="card-body">
+          <h5 id=card11 class="card-title"></h5>
+          <form id="event-form">
+            <label for="event-input11">Add Your Event</label>
+            <input type="text" id="event-input11" /><br />
+          </form>
+          <a href="#" id=btn11 class="btn btn-primary">Save event</a>
+        </div>
+      </div>
+
+      <div class="card" value="12" id="twelve">
+        <div class="card-header">
+          NOON
+        </div>
+        <div class="card-body">
+          <h5 id=card12 class="card-title"></h5>
+          <form id="event-form">
+            <label for="event-input12">Add Your Event</label>
+            <input type="text" id="event-input12" /><br />
+          </form>
+          <a href="#" id=btn12 class="btn btn-primary">Save event</a>
+        </div>
+      </div>
+      <div class="card" value="1" id="one">
+        <div class="card-header">
+          1:00PM
+        </div>
+        <div class="card-body">
+          <h5 id=card1 class="card-title"></h5>
+          <form id="event-form">
+            <label for="event-input1">Add Your Event</label>
+            <input type="text" id="event-input1" /><br />
+          </form>
+          <a href="#" id=btn1 class="btn btn-primary">Save event</a>
+        </div>
+      </div>
+
+      <div class="card" value="2" id="two">
+        <div class="card-header">
+          2:00PM
+        </div>
+        <div class="card-body">
+          <h5 class="card-title" id=card2 ></h5>
+          <form id="event-form">
+            <label for="event-input2">Add Your Event</label>
+            <input type="text" id="event-input2" /><br />
+          </form>
+          <a href="#" id=btn2 class="btn btn-primary">Save event</a>
+        </div>
+      </div>
+
+      <div class="card" value="3" id="three">
+        <div class="card-header">
+          3:00PM
+        </div>
+        <div class="card-body">
+          <h5 id=card3 class="card-title"></h5>
+          <form id="event-form">
+            <label for="event-input3">Add Your Event</label>
+            <input type="text" id="event-input3" /><br />
+          </form>
+          <a href="#" id=btn3 class="btn btn-primary">Save event</a>
+        </div>
+      </div>
+
+      <div class="card" value="4" id="four">
+        <div class="card-header">
+          4:00PM
+        </div>
+        <div class="card-body">
+          <h5 id=card4 class="card-title"></h5>
+          <form id="event-form">
+            <label for="event-input4">Add Your Event</label>
+            <input type="text" id="event-input4" /><br />
+          </form>
+          <a href="#" id=btn4 class="btn btn-primary">Save event</a>
+        </div>
+      </div>
       
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script>
+$(document).ready(function() {
+
+$("#btn9").on("click", function(event){
+  event.preventDefault();
+var eventSent9 = $("#event-input9").val();
+console.log(eventSent9);
+localStorage.setItem("event9", JSON.stringify(eventSent9))
+var eventStored9 = JSON.parse(localStorage.getItem("event9"));
+$("#card9").text(eventStored9);
+
+})
+
+$("#btn10").on("click", function(event){
+  event.preventDefault();
+var eventSent10 = $("#event-input10").val();
+console.log(eventSent10);
+localStorage.setItem("event10", JSON.stringify(eventSent10))
+var eventStored10 = JSON.parse(localStorage.getItem("event10"));
+$("#card10").text(eventStored10);
+})
+
+$("#btn11").on("click", function(event){
+  event.preventDefault();
+var eventSent11 = $("#event-input11").val();
+console.log(eventSent11);
+localStorage.setItem("event11", JSON.stringify(eventSent11))
+var eventStored11 = JSON.parse(localStorage.getItem("event11"));
+$("#card11").text(eventStored11);
+})
+
+$("#btn12").on("click", function(event){
+  event.preventDefault();
+var eventSent12 = $("#event-input12").val();
+console.log(eventSent12);
+localStorage.setItem("event12", JSON.stringify(eventSent12))
+var eventStored12 = JSON.parse(localStorage.getItem("event12"));
+$("#card12").text(eventStored12);
+})
+
+$("#btn1").on("click", function(event){
+  event.preventDefault();
+var eventSent1 = $("#event-input1").val();
+console.log(eventSent1);
+localStorage.setItem("event1", JSON.stringify(eventSent1))
+var eventStored1 = JSON.parse(localStorage.getItem("event1"));
+$("#card1").text(eventStored1);
+
+})
+
+$("#btn2").on("click", function(event){
+  event.preventDefault();
+var eventSent2 = $("#event-input2").val();
+console.log(eventSent2);
+localStorage.setItem("event2", JSON.stringify(eventSent2))
+var eventStored2 = JSON.parse(localStorage.getItem("event2"));
+$("#card2").text(eventStored2);
+})
+
+$("#btn3").on("click", function(event){
+  event.preventDefault();
+var eventSent3 = $("#event-input3").val();
+console.log(eventSent3);
+localStorage.setItem("event3", JSON.stringify(eventSent3))
+var eventStored3 = JSON.parse(localStorage.getItem("event3"));
+$("#card3").text(eventStored3);
+})
+
+$("#btn4").on("click", function(event){
+  event.preventDefault();
+var eventSent4 = $("#event-input4").val();
+console.log(eventSent4);
+localStorage.setItem("event4", JSON.stringify(eventSent4))
+var eventStored4 = JSON.parse(localStorage.getItem("event4"));
+$("#card4").text(eventStored4);
+})
+
+
+});
+  </script>
   </body>
 </html>
