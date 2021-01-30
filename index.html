@@ -40,7 +40,7 @@
             <label for="event-input9">Add Your Event</label>
             <input type="text" id="event-input9" /><br />
           </form>
-          <a href="#" id=btn9 class="btn btn-primary">Save event</a>
+          <a href="#" id=btn9 class="btn btn-primary" value="9">Save event</a>
         </div>
       </div>
 
@@ -148,15 +148,77 @@
   <script>
 $(document).ready(function() {
 
+$("<h2>", {text: moment().format('MMMM Do YYYY, h:mm a')}).appendTo("header");
+
 $("#btn9").on("click", function(event){
   event.preventDefault();
 var eventSent9 = $("#event-input9").val();
-console.log(eventSent9);
 localStorage.setItem("event9", JSON.stringify(eventSent9))
 var eventStored9 = JSON.parse(localStorage.getItem("event9"));
 $("#card9").text(eventStored9);
-
 })
+
+function colorCards(){
+  var currentTime = moment().format('kk');
+
+  console.log(currentTime)
+if (currentTime > 9){
+  $("#nine").addClass("past")
+} else if (currentTime === 9){
+  $("#nine").addClass("present")
+} else {
+  $("#nine").addClass("future")
+};
+if (currentTime > 10){
+  $("#ten").addClass("past")
+} else if (currentTime === 10){
+  $("#ten").addClass("present")
+} else {
+  $("#ten").addClass("future")
+};
+if (currentTime > 11){
+  $("#eleven").addClass("past")
+} else if (currentTime === 11){
+  $("#eleven").addClass("present")
+} else {
+  $("#eleven").addClass("future")
+};
+if (currentTime > 12){
+  $("#twelve").addClass("past")
+} else if (currentTime === 12){
+  $("#twelve").addClass("present")
+} else {
+  $("#twelve").addClass("future")
+};
+if (currentTime > 13){
+  $("#one").addClass("past")
+} else if (currentTime === 13){
+  $("#one").addClass("present")
+} else {
+  $("#one").addClass("future")
+};
+if (currentTime > 14){
+  $("#two").addClass("past")
+} else if (currentTime === 14){
+  $("#two").addClass("present")
+} else {
+  $("#two").addClass("future")
+};
+if (currentTime > 15){
+  $("#three").addClass("past")
+} else if (currentTime === 15){
+  $("#three").addClass("present")
+} else {
+  $("#three").addClass("future")
+};
+if (currentTime > 16){
+  $("#four").addClass("past")
+} else if (currentTime === 16){
+  $("#four").addClass("present")
+} else {
+  $("#four").addClass("future")
+};
+}
 
 $("#btn10").on("click", function(event){
   event.preventDefault();
@@ -222,6 +284,7 @@ var eventStored4 = JSON.parse(localStorage.getItem("event4"));
 $("#card4").text(eventStored4);
 })
 
+colorCards();
 
 });
   </script>
